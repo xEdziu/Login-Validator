@@ -12,7 +12,7 @@ This tiny project contains two files:
 
 ## Setting up
 
-To set up validator, you only have to type all the words that you want to exclude as shown in example:
+To make validator work, you only have to type all the words that you want to exclude as shown in example:
 ```php
 $badData = array('write', 'here', 'all', 'words', 
                 'that', 'you', 'dont', 'want', 'to',
