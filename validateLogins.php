@@ -11,12 +11,17 @@ function validateNick($input, $arr){
         $word = strtolower($word);
         if ($input == $word)
             return false;
+      //function under this comment exists in PHP 8.0
+        if (str_contains($input, $word)) {
+            return false;
+        }
         similar_text($input, $word, $percent);
         if ($percent > 75)
             return false;
     }
     return true;
 }
+
 
 $input = $_POST['input'];
 
