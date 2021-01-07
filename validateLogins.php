@@ -6,22 +6,16 @@ $badData = array('write', 'here', 'all', 'words',
 
 
 function validateNick($input, $arr){
-    $flag = true;
     $input = strtolower($input);
     foreach ($arr as $word){
         $word = strtolower($word);
         if ($input == $word)
-            $flag = false;
+            return false;
         similar_text($input, $word, $percent);
         if ($percent > 75)
-            $flag = false;
-        if (!$flag)
-            break;
+            return false;
     }
-    if ($flag)
-        return true;
-    else 
-        return false;
+    return true;
 }
 
 $input = $_POST['input'];
