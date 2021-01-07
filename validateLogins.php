@@ -13,7 +13,7 @@ function validateNick($input, $arr){
         if ($input == $word)
             $flag = false;
         similar_text($input, $word, $percent);
-        if ($percent > 65)
+        if ($percent > 75)
             $flag = false;
         if (!$flag)
             break;
