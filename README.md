@@ -2,7 +2,7 @@
 
 A simple login validator for those, who does not want to have offensive nicknames in their database.
 
-As a attachment to PHP file, which does all the work, I added a simple HTML/JS template to show example of AJAX usage.
+As an attachment to PHP file, which does all the work, I added a simple HTML/JS template to show example of AJAX usage.
 
 ## Files
 
