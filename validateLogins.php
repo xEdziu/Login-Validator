@@ -9,15 +9,10 @@ function validateNick($input, $arr){
     $input = strtolower($input);
     foreach ($arr as $word){
         $word = strtolower($word);
-        if ($input == $word)
-            return false;
-      //function under this comment exists in PHP 8.0
-        if (str_contains($input, $word)) {
-            return false;
-        }
+        //function under this comment exists in PHP 8.0
+        if (str_contains($input, $word)) return false;
         similar_text($input, $word, $percent);
-        if ($percent > 75)
-            return false;
+        if ($percent > 75) return false;
     }
     return true;
 }
